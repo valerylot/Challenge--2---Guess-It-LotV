@@ -18,7 +18,7 @@ do
     //validation for mode choice
     bool success = int.TryParse(mode, out int chooseMode);
 
-    while(success == false)
+    while (success == false || chooseMode >= 5 || chooseMode == 0)
     {
         Console.WriteLine("You did not enter a valid number.");
         Console.Write("Please enter a number 1 - 4: ");
@@ -73,15 +73,14 @@ do
             else if (randNum > playerGuess)
             {
                 Console.WriteLine("Your guess is lower than my number");
-            }
-            else if (randNum < playerGuess)
-            {
-                Console.WriteLine("Your guess is higher than my number");
+                Console.WriteLine("Keep guessing");
+                // userNum = Console.ReadLine();
             }
             else
             {
-                Console.Write("Keep guessing: ");
-                userNum = Console.ReadLine();
+                Console.WriteLine("Your guess is higher than my number");
+                Console.WriteLine("Keep guessing.");
+                // userNum = Console.ReadLine();
             }
             attempts = attempts + 1;
         }
@@ -123,23 +122,23 @@ do
             else if (randNum2 > playerGuess)
             {
                 Console.WriteLine("Your guess is lower than my number");
-            }
-            else if (randNum2 < playerGuess)
-            {
-                Console.WriteLine("Your guess is higher than my number");
+                Console.WriteLine("Keep guessing");
+                // userNum = Console.ReadLine();
             }
             else
             {
-                Console.Write("Keep guessing: ");
-                userNum = Console.ReadLine();
+                Console.WriteLine("Your guess is higher than my number");
+                Console.WriteLine("Keep guessing");
+                // userNum = Console.ReadLine();
             }
+
             attempts = attempts + 1;
         }
     }
 
     //choose mode 3
     int max3 = 101;
-    //this generates our random number between 1-100
+    //this generates our random number between 1-50
     int randNum3 = rand.Next(min, max3);
 
     while (chooseMode == 3)
@@ -170,19 +169,19 @@ do
                 Console.WriteLine($"It took you {attempts} tries.");
                 chooseMode = 0;
             }
-            else if (randNum > playerGuess)
+            else if (randNum3 > playerGuess)
             {
                 Console.WriteLine("Your guess is lower than my number");
-            }
-            else if (randNum < playerGuess)
-            {
-                Console.WriteLine("Your guess is higher than my number");
+                Console.WriteLine("Keep guessing");
+                // userNum = Console.ReadLine();
             }
             else
             {
-                Console.Write("Keep guessing: ");
-                userNum = Console.ReadLine();
+                Console.WriteLine("Your guess is higher than my number");
+                Console.WriteLine("Keep guessing");
+                // userNum = Console.ReadLine();
             }
+
             attempts = attempts + 1;
         }
     }
@@ -199,10 +198,6 @@ do
         Console.Write("Please enter your minimum number: ");
         string userMin = Console.ReadLine();
         bool success5 = int.TryParse(userMin, out min2);
-        Console.Write("Please enter your maximum number: ");
-        string userMax = Console.ReadLine();
-        bool success6 = int.TryParse(userMax, out max4);
-
 
         //validation
 
@@ -214,6 +209,10 @@ do
             userNum = Console.ReadLine();
             success5 = int.TryParse(userNum, out min2);
         }
+
+        Console.Write("Please enter your maximum number: ");
+        string userMax = Console.ReadLine();
+        bool success6 = int.TryParse(userMax, out max4);
 
         while (success6 == false)
         {
@@ -257,16 +256,16 @@ do
             else if (randNum4 > playerGuess)
             {
                 Console.WriteLine("Your guess is lower than my number");
-            }
-            else if (randNum4 < playerGuess)
-            {
-                Console.WriteLine("Your guess is higher than my number");
+                Console.WriteLine("Keep guessing");
+                // userNum = Console.ReadLine();
             }
             else
             {
-                Console.Write("Keep guessing: ");
-                userNum = Console.ReadLine();
+                Console.WriteLine("Your guess is higher than my number");
+                Console.WriteLine("Keep guessing");
+                // userNum = Console.ReadLine();
             }
+
             attempts = attempts + 1;
         }
 

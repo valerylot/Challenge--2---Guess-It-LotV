@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Challenge #2 - Guess It LotV")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0f1e529d2e878987ea412e89391e3c0b4db1ea35")]
 [assembly: System.Reflection.AssemblyProductAttribute("Challenge #2 - Guess It LotV")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Challenge #2 - Guess It LotV")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
